@@ -1,24 +1,35 @@
-/* Custom Styles for Portfolio */
+/* Palet Warna Kalem & Netral (Warm Neutral & Slate/Zinc) */
 
+:root {
+  --bg-primary: #0f141c;       /* Dark charcoal/slate yang hangat & teduh */
+  --card-bg: rgba(26, 33, 44, 0.65);
+  --card-border: rgba(148, 163, 184, 0.12);
+  --accent-soft: #94a3b8;      /* Abu-abu netral elegan */
+  --accent-warm: #d4d4d8;      /* Putih hangat/zinc */
+}
+
+/* Gradient teks yang lembut, tenang & tidak mencolok */
 .text-gradient {
-  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 50%, #94a3b8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* Navigasi semi-transparan dengan blur modern */
 .bg-glass {
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(15, 20, 28, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
+/* Kartu dengan border halus netral */
 .card-glass {
-  background: rgba(30, 41, 59, 0.55);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(24, 31, 42, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(148, 163, 184, 0.12);
 }
 
 .card-glass:hover {
-  border-color: rgba(56, 189, 248, 0.45);
-  transform: translateY(-3px);
+  border-color: rgba(203, 213, 225, 0.28);
+  transform: translateY(-2px);
 }
