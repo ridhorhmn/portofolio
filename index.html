@@ -38,11 +38,14 @@
 </head>
 <body class="bg-[#0f141c] text-slate-200 font-sans antialiased selection:bg-slate-700 selection:text-white">
 
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
   <!-- Ambient Light Effect Netral & Kalem -->
   <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
-    <div class="absolute -top-40 -left-40 w-96 h-96 bg-slate-600/10 rounded-full blur-3xl"></div>
-    <div class="absolute top-1/3 -right-40 w-96 h-96 bg-zinc-500/10 rounded-full blur-3xl"></div>
-    <div class="absolute -bottom-40 left-1/3 w-96 h-96 bg-slate-500/10 rounded-full blur-3xl"></div>
+    <div class="ambient-blob absolute -top-40 -left-40 w-96 h-96 bg-slate-600/10 rounded-full blur-3xl"></div>
+    <div class="ambient-blob absolute top-1/3 -right-40 w-96 h-96 bg-zinc-500/10 rounded-full blur-3xl"></div>
+    <div class="ambient-blob absolute -bottom-40 left-1/3 w-96 h-96 bg-slate-500/10 rounded-full blur-3xl"></div>
   </div>
 
   <!-- Navbar Sticky Header -->
@@ -95,17 +98,17 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center w-full">
       <!-- Info Kiri -->
       <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-        <h1 class="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight leading-tight text-white">
+        <h1 data-reveal="fade-up" class="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight leading-tight text-white">
           Halo, Saya <br class="hidden sm:inline" />
           <span class="text-gradient">Muhammad Ridho Rahman</span>
         </h1>
 
-        <p class="text-sm sm:text-base text-slate-300 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+        <p data-reveal="fade-up" class="delay-200 text-sm sm:text-base text-slate-300 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
           Lulusan <strong>S1 Teknik Informatika</strong> (Universitas Indraprasta PGRI) dengan latar belakang <strong>Teknik Komputer & Jaringan (TKJ)</strong>, berfokus pada <strong>Junior IT Support & Network Administrator</strong>. Terampil dalam troubleshooting hardware/software, konfigurasi jaringan <strong>LAN/WAN, TCP/IP, MikroTik, dan Debian Linux</strong>. Didukung keahlian dalam <strong>SQL & Database Management</strong>, serta pengalaman teknis membangun aplikasi desktop dan web sebagai pembuktian problem-solving digital.
         </p>
 
         <!-- Lokasi & Kontak Cepat -->
-        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs sm:text-sm text-slate-400">
+        <div data-reveal="fade-up" class="delay-300 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs sm:text-sm text-slate-400">
           <span class="inline-flex items-center gap-1.5">
             <i data-lucide="map-pin" class="w-4 h-4 text-slate-400"></i>
             Bojonggede, Kab. Bogor
@@ -121,38 +124,38 @@
         </div>
 
         <!-- Tombol Aksi -->
-        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
-          <a href="#proyek" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-200 text-slate-900 hover:bg-white font-semibold text-sm flex items-center justify-center gap-2 shadow-sm transition-all">
+        <div data-reveal="fade-up" class="delay-400 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
+          <a href="#proyek" class="btn-primary w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-200 text-slate-900 hover:bg-white font-semibold text-sm flex items-center justify-center gap-2 shadow-sm transition-all">
             Lihat Proyek & Karya
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
-          <a href="assets/CV_Muhammad_Ridho_Rahman.pdf" download="CV_Muhammad_Ridho_Rahman.pdf" target="_blank" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#141b24] border border-slate-700 hover:border-slate-400 text-slate-200 hover:text-white font-semibold text-sm flex items-center justify-center gap-2 transition-all shadow-sm group">
+          <a href="assets/CV_Muhammad_Ridho_Rahman.pdf" download="CV_Muhammad_Ridho_Rahman.pdf" target="_blank" class="btn-primary w-full sm:w-auto px-6 py-3 rounded-xl bg-[#141b24] border border-slate-700 hover:border-slate-400 text-slate-200 hover:text-white font-semibold text-sm flex items-center justify-center gap-2 transition-all shadow-sm group">
             <i data-lucide="file-down" class="w-4 h-4 text-slate-300 group-hover:text-white transition-colors"></i>
             Unduh CV
           </a>
-          <a href="https://wa.me/62895417896016" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-[#141b24] border border-slate-700/80 hover:border-slate-500 text-slate-300 hover:text-white font-medium text-sm flex items-center justify-center gap-2 transition-all">
+          <a href="https://wa.me/62895417896016" target="_blank" rel="noopener noreferrer" class="btn-primary w-full sm:w-auto px-5 py-3 rounded-xl bg-[#141b24] border border-slate-700/80 hover:border-slate-500 text-slate-300 hover:text-white font-medium text-sm flex items-center justify-center gap-2 transition-all">
             <i data-lucide="message-circle" class="w-4 h-4 text-slate-400"></i>
             WhatsApp
           </a>
         </div>
 
         <!-- Tautan Sosial Media dengan Logo SVG Asli -->
-        <div class="flex items-center justify-center lg:justify-start gap-3 pt-2">
+        <div data-reveal="fade-up" class="delay-500 flex items-center justify-center lg:justify-start gap-3 pt-2">
           <!-- GitHub -->
-          <a href="https://github.com/ridhorhmn" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-[#141b24] border border-slate-800 text-slate-400 hover:text-white hover:border-slate-600 transition-all flex items-center justify-center shadow-sm group" title="GitHub /ridhorhmn">
-            <svg class="w-5 h-5 fill-current group-hover:scale-105 transition-transform" viewBox="0 0 24 24">
+          <a href="https://github.com/ridhorhmn" target="_blank" rel="noopener noreferrer" class="social-icon w-10 h-10 rounded-xl bg-[#141b24] border border-slate-800 text-slate-400 hover:text-white hover:border-slate-600 transition-all flex items-center justify-center shadow-sm group" title="GitHub /ridhorhmn">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
             </svg>
           </a>
           <!-- LinkedIn -->
-          <a href="https://www.linkedin.com/in/muhammad-ridho-rahman-a42b18219" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-[#141b24] border border-slate-800 text-slate-400 hover:text-white hover:border-slate-600 transition-all flex items-center justify-center shadow-sm group" title="LinkedIn Profile">
-            <svg class="w-5 h-5 fill-current group-hover:scale-105 transition-transform" viewBox="0 0 24 24">
+          <a href="https://www.linkedin.com/in/muhammad-ridho-rahman-a42b18219" target="_blank" rel="noopener noreferrer" class="social-icon w-10 h-10 rounded-xl bg-[#141b24] border border-slate-800 text-slate-400 hover:text-white hover:border-slate-600 transition-all flex items-center justify-center shadow-sm group" title="LinkedIn Profile">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
               <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
             </svg>
           </a>
           <!-- Email / Mail -->
-          <a href="mailto:doorahman03@gmail.com" class="w-10 h-10 rounded-xl bg-[#141b24] border border-slate-800 text-slate-400 hover:text-white hover:border-slate-600 transition-all flex items-center justify-center shadow-sm group" title="Email Langsung">
-            <svg class="w-5 h-5 fill-current group-hover:scale-105 transition-transform" viewBox="0 0 24 24">
+          <a href="mailto:doorahman03@gmail.com" class="social-icon w-10 h-10 rounded-xl bg-[#141b24] border border-slate-800 text-slate-400 hover:text-white hover:border-slate-600 transition-all flex items-center justify-center shadow-sm group" title="Email Langsung">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
               <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
             </svg>
           </a>
@@ -160,16 +163,16 @@
       </div>
 
       <!-- Kartu Profil Grafis Kanan -->
-      <div class="lg:col-span-5 flex justify-center">
+      <div data-reveal="fade-left" class="delay-200 lg:col-span-5 flex justify-center">
         <div class="relative w-full max-w-sm">
           <!-- Background Glow Halus -->
           <div class="absolute inset-0 rounded-3xl bg-slate-500/10 blur-xl"></div>
           
-          <!-- Profile Card -->
-          <div class="relative w-full rounded-3xl overflow-hidden border border-slate-800 bg-[#141b24]/90 shadow-xl p-6 flex flex-col items-center text-center space-y-4">
-            <div class="w-32 h-32 sm:w-36 sm:h-36 rounded-full bg-slate-800 p-1 border border-slate-700 shadow-md">
+          <!-- Profile Card dengan Float Animation -->
+          <div class="float-card relative w-full rounded-3xl overflow-hidden border border-slate-800 bg-[#141b24]/90 shadow-xl p-6 flex flex-col items-center text-center space-y-4">
+            <div class="ring-pulse w-32 h-32 sm:w-36 sm:h-36 rounded-full bg-slate-800 p-1 border border-slate-700 shadow-md">
               <div class="w-full h-full rounded-full bg-slate-900 overflow-hidden flex items-center justify-center">
-                <img src="assets/img/profile.png" alt="Foto Muhammad Ridho Rahman" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentElement.innerHTML='<i data-lucide=\'user\' class=\'w-16 h-16 text-slate-400\'></i>'; lucide.createIcons();">
+                <img src="assets/img/profile.png" alt="Foto Muhammad Ridho Rahman" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" onerror="this.onerror=null; this.parentElement.innerHTML='<i data-lucide=\'user\' class=\'w-16 h-16 text-slate-400\'></i>'; lucide.createIcons();">
               </div>
             </div>
 
@@ -179,20 +182,20 @@
             </div>
 
             <!-- Mini Quick Highlights -->
-            <div class="w-full grid grid-cols-2 gap-2 text-left pt-2 border-t border-slate-800 text-xs">
-              <div class="p-2.5 rounded-xl bg-slate-800/40">
+            <div class="w-full grid grid-cols-2 gap-2 text-left pt-2 border-t border-slate-800 text-xs" data-stagger>
+              <div class="p-2.5 rounded-xl bg-slate-800/40 hover:bg-slate-800/70 transition-colors" data-reveal="zoom-in">
                 <p class="text-slate-400 text-[11px]">Pendidikan</p>
                 <p class="text-slate-200 font-medium truncate">S1 Informatika</p>
               </div>
-              <div class="p-2.5 rounded-xl bg-slate-800/40">
+              <div class="p-2.5 rounded-xl bg-slate-800/40 hover:bg-slate-800/70 transition-colors" data-reveal="zoom-in">
                 <p class="text-slate-400 text-[11px]">IPK Kelulusan</p>
                 <p class="text-slate-200 font-semibold">3.48 / 4.00</p>
               </div>
-              <div class="p-2.5 rounded-xl bg-slate-800/40">
+              <div class="p-2.5 rounded-xl bg-slate-800/40 hover:bg-slate-800/70 transition-colors" data-reveal="zoom-in">
                 <p class="text-slate-400 text-[11px]">Sertifikasi</p>
                 <p class="text-slate-200 font-medium truncate">Network Admin</p>
               </div>
-              <div class="p-2.5 rounded-xl bg-slate-800/40">
+              <div class="p-2.5 rounded-xl bg-slate-800/40 hover:bg-slate-800/70 transition-colors" data-reveal="zoom-in">
                 <p class="text-slate-400 text-[11px]">Domisili</p>
                 <p class="text-slate-200 font-medium">Bojonggede, Bogor</p>
               </div>
@@ -205,12 +208,12 @@
 
   <!-- Profil / Ringkasan Diri -->
   <section id="tentang" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-slate-850">
-    <div class="text-center max-w-2xl mx-auto mb-12">
+    <div data-reveal="fade-up" class="text-center max-w-2xl mx-auto mb-12">
       <h2 class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-2">Profil Profesional</h2>
-      <h3 class="text-2xl sm:text-3xl font-bold text-slate-100">Tentang Saya</h3>
+      <h3 class="text-2xl sm:text-3xl font-bold text-slate-100 section-title-line">Tentang Saya</h3>
     </div>
 
-    <div class="card-glass p-6 sm:p-10 rounded-2xl">
+    <div data-reveal="fade-up" class="delay-200 card-glass p-6 sm:p-10 rounded-2xl">
       <p class="text-slate-300 text-sm sm:text-base leading-relaxed text-justify sm:text-left">
         Saya lulusan <strong>S1 Teknik Informatika dari Universitas Indraprasta PGRI dengan IPK 3,48</strong> dan latar belakang pendidikan <strong>Teknik Komputer dan Jaringan</strong> yang berfokus pada peran <strong>Junior IT Support & Network Administrator</strong>. Memiliki fondasi kuat dalam administrasi infrastruktur jaringan komputer, perakitan perangkat keras, instalasi sistem operasi, dan troubleshooting teknis (hardware, software, dan konektivitas).
       </p>
@@ -235,14 +238,14 @@
 
   <!-- Pendidikan Section -->
   <section id="pendidikan" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-slate-850">
-    <div class="text-center max-w-2xl mx-auto mb-12">
+    <div data-reveal="fade-up" class="text-center max-w-2xl mx-auto mb-12">
       <h2 class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-2">Latar Belakang Akademis</h2>
-      <h3 class="text-2xl sm:text-3xl font-bold text-slate-100">Riwayat Pendidikan</h3>
+      <h3 class="text-2xl sm:text-3xl font-bold text-slate-100 section-title-line">Riwayat Pendidikan</h3>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Universitas -->
-      <div class="card-glass p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
+      <div data-reveal="fade-right" class="delay-100 card-glass p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between text-xs font-semibold text-slate-400 mb-2">
             <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700 text-slate-300">2022 - 2026</span>
@@ -261,7 +264,7 @@
       </div>
 
       <!-- SMK -->
-      <div class="card-glass p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
+      <div data-reveal="fade-left" class="delay-200 card-glass p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between text-xs font-semibold text-slate-400 mb-2">
             <span class="px-2.5 py-1 rounded bg-slate-800 border border-slate-700 text-slate-300">2018 – 2021</span>
@@ -279,16 +282,16 @@
 
   <!-- Keterampilan Teknis & Tools Sesuai Referensi -->
   <section id="keahlian" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-slate-850">
-    <div class="text-center max-w-2xl mx-auto mb-16">
+    <div data-reveal="fade-up" class="text-center max-w-2xl mx-auto mb-16">
       <h2 class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-2">Keahlian & Penguasaan</h2>
-      <h3 class="text-2xl sm:text-3xl font-bold text-slate-100">Tools & Keterampilan</h3>
+      <h3 class="text-2xl sm:text-3xl font-bold text-slate-100 section-title-line">Tools & Keterampilan</h3>
     </div>
 
     <!-- Container Grid Tools Showcase -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 items-start">
       
       <!-- Sisi Kiri: Visual Tools Icons -->
-      <div class="lg:col-span-5 card-glass p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
+      <div data-reveal="fade-right" class="delay-100 lg:col-span-5 card-glass p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between mb-6">
             <h4 class="text-xl font-bold tracking-wider text-slate-200 uppercase flex items-center gap-2">
@@ -401,7 +404,7 @@
       </div>
 
       <!-- Sisi Kanan: Hard Skills & Soft Skills Badges Pill -->
-      <div class="lg:col-span-7 space-y-6">
+      <div data-reveal="fade-left" class="delay-200 lg:col-span-7 space-y-6">
         
         <!-- HARD SKILLS -->
         <div class="card-glass p-6 sm:p-7 rounded-2xl">
@@ -459,7 +462,7 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       <!-- 1. Jaringan / Networking -->
-      <div class="card-glass p-6 rounded-2xl">
+      <div data-reveal="fade-up" class="delay-100 card-glass p-6 rounded-2xl">
         <div class="w-12 h-12 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center mb-4 border border-slate-700">
           <i data-lucide="network" class="w-6 h-6"></i>
         </div>
@@ -478,7 +481,7 @@
       </div>
 
       <!-- 2. Administrasi Jaringan & Server -->
-      <div class="card-glass p-6 rounded-2xl">
+      <div data-reveal="fade-up" class="delay-200 card-glass p-6 rounded-2xl">
         <div class="w-12 h-12 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center mb-4 border border-slate-700">
           <i data-lucide="server" class="w-6 h-6"></i>
         </div>
@@ -495,7 +498,7 @@
       </div>
 
       <!-- 3. IT Support & Hardware -->
-      <div class="card-glass p-6 rounded-2xl">
+      <div data-reveal="fade-up" class="delay-300 card-glass p-6 rounded-2xl">
         <div class="w-12 h-12 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center mb-4 border border-slate-700">
           <i data-lucide="wrench" class="w-6 h-6"></i>
         </div>
@@ -512,7 +515,7 @@
       </div>
 
       <!-- 4. Pemrograman (Programming) -->
-      <div class="card-glass p-6 rounded-2xl">
+      <div data-reveal="fade-up" class="delay-100 card-glass p-6 rounded-2xl">
         <div class="w-12 h-12 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center mb-4 border border-slate-700">
           <i data-lucide="code" class="w-6 h-6"></i>
         </div>
@@ -531,7 +534,7 @@
       </div>
 
       <!-- 5. Database Management -->
-      <div class="card-glass p-6 rounded-2xl">
+      <div data-reveal="fade-up" class="delay-200 card-glass p-6 rounded-2xl">
         <div class="w-12 h-12 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center mb-4 border border-slate-700">
           <i data-lucide="database" class="w-6 h-6"></i>
         </div>
@@ -547,7 +550,7 @@
       </div>
 
       <!-- 6. Produktivitas & Office -->
-      <div class="card-glass p-6 rounded-2xl">
+      <div data-reveal="fade-up" class="delay-300 card-glass p-6 rounded-2xl">
         <div class="w-12 h-12 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center mb-4 border border-slate-700">
           <i data-lucide="file-spreadsheet" class="w-6 h-6"></i>
         </div>
@@ -566,10 +569,10 @@
 
   <!-- Proyek Nyata Sesuai CV -->
   <section id="proyek" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-slate-850">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+    <div data-reveal="fade-up" class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
       <div>
         <h2 class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-2">Studi Kasus & Portofolio</h2>
-        <h3 class="text-2xl sm:text-3xl font-bold text-slate-100">Proyek Unggulan</h3>
+        <h3 class="text-2xl sm:text-3xl font-bold text-slate-100 section-title-line">Proyek Unggulan</h3>
       </div>
       <p class="text-slate-400 max-w-md text-sm">
         Proyek implementasi nyata dari tugas akhir skripsi dan proyek aplikasi yang pernah saya rancang.
@@ -579,7 +582,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       
       <!-- Proyek 1: Tugas Akhir Apriori -->
-      <div class="card-glass rounded-2xl overflow-hidden flex flex-col justify-between group border border-slate-800 hover:border-slate-600 transition-all duration-300">
+      <div data-reveal="fade-up" class="delay-100 project-card card-glass rounded-2xl overflow-hidden flex flex-col justify-between group border border-slate-800 hover:border-slate-600 transition-all duration-300">
         <!-- Screenshot Proyek Apriori -->
         <div class="relative w-full aspect-video bg-slate-950 overflow-hidden border-b border-slate-850">
           <img src="assets/img/proyek-apriori.png" alt="Tampilan Hasil Aturan Asosiasi Algoritma Apriori" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
@@ -635,7 +638,7 @@
       </div>
 
       <!-- Proyek 2: Pemrograman Visual (Pemvis) - Dapoer Syafira -->
-      <div class="card-glass rounded-2xl overflow-hidden flex flex-col justify-between group border border-slate-800 hover:border-slate-600 transition-all duration-300">
+      <div data-reveal="fade-up" class="delay-200 project-card card-glass rounded-2xl overflow-hidden flex flex-col justify-between group border border-slate-800 hover:border-slate-600 transition-all duration-300">
         <!-- Screenshot Proyek Dapoer Syafira -->
         <div class="relative w-full aspect-video bg-slate-950 overflow-hidden border-b border-slate-850">
           <img src="assets/img/proyek-dapoer-syafira.png" alt="Tampilan Antarmuka Aplikasi Desktop Dapoer Syafira" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
@@ -687,7 +690,7 @@
       </div>
 
       <!-- Proyek 3: Aplikasi Inventory Berbasis Web -->
-      <div class="card-glass rounded-2xl overflow-hidden flex flex-col justify-between group border border-slate-800 hover:border-slate-600 transition-all duration-300">
+      <div data-reveal="fade-up" class="delay-300 project-card card-glass rounded-2xl overflow-hidden flex flex-col justify-between group border border-slate-800 hover:border-slate-600 transition-all duration-300">
         <!-- Screenshot Proyek Inventory -->
         <div class="relative w-full aspect-video bg-slate-950 overflow-hidden border-b border-slate-850">
           <img src="assets/img/proyek-inventory.png" alt="Tampilan Antarmuka Aplikasi Inventory Berbasis Web" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300">
@@ -743,15 +746,15 @@
 
   <!-- Pengalaman Relevan & Kegiatan Sesuai CV -->
   <section id="pengalaman" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-slate-850">
-    <div class="text-center max-w-2xl mx-auto mb-16">
+    <div data-reveal="fade-up" class="text-center max-w-2xl mx-auto mb-16">
       <h2 class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-2">Riwayat Pengalaman</h2>
-      <h3 class="text-2xl sm:text-3xl font-bold text-slate-100">Pengalaman Relevan</h3>
+      <h3 class="text-2xl sm:text-3xl font-bold text-slate-100 section-title-line">Pengalaman Relevan</h3>
     </div>
 
     <div class="max-w-3xl mx-auto space-y-8 relative before:absolute before:inset-0 before:left-4 sm:before:left-1/2 before:w-0.5 before:-translate-x-1/2 before:bg-slate-800">
 
       <!-- 1. Katering Dapoer Syafira - Java Desktop Developer (KKP) -->
-      <div class="relative flex flex-col sm:flex-row items-start sm:justify-between group">
+      <div data-reveal="fade-right" class="delay-100 relative flex flex-col sm:flex-row items-start sm:justify-between group">
         <div class="sm:w-1/2 sm:pr-8 sm:text-right pl-12 sm:pl-0">
           <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">Oktober 2025 – Januari 2026</span>
           <h4 class="text-lg font-bold text-white mt-2">Java Desktop Developer (Kuliah Kerja Praktek)</h4>
@@ -769,7 +772,7 @@
       </div>
 
       <!-- 2. PKL Kantor Pelayanan Pajak Cibinong -->
-      <div class="relative flex flex-col sm:flex-row items-start sm:justify-between group">
+      <div data-reveal="fade-left" class="delay-200 relative flex flex-col sm:flex-row items-start sm:justify-between group">
         <div class="hidden sm:block sm:w-1/2 sm:pr-8"></div>
         <div class="absolute left-1.5 sm:left-1/2 -translate-x-1/2 top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-500 flex items-center justify-center">
           <div class="w-2 h-2 rounded-full bg-slate-400"></div>
@@ -787,7 +790,7 @@
       </div>
 
       <!-- 3. Volunteer Samara Musikal -->
-      <div class="relative flex flex-col sm:flex-row items-start sm:justify-between group">
+      <div data-reveal="fade-right" class="delay-300 relative flex flex-col sm:flex-row items-start sm:justify-between group">
         <div class="sm:w-1/2 sm:pr-8 sm:text-right pl-12 sm:pl-0">
           <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700">Agustus 2025</span>
           <h4 class="text-lg font-bold text-white mt-2">Usher (Volunteer)</h4>
@@ -805,7 +808,7 @@
       </div>
 
       <!-- 4. Mitra Pengemudi ShopeeFood -->
-      <div class="relative flex flex-col sm:flex-row items-start sm:justify-between group">
+      <div data-reveal="fade-left" class="delay-400 relative flex flex-col sm:flex-row items-start sm:justify-between group">
         <div class="hidden sm:block sm:w-1/2 sm:pr-8"></div>
         <div class="absolute left-1.5 sm:left-1/2 -translate-x-1/2 top-1.5 w-6 h-6 rounded-full bg-slate-950 border-2 border-slate-500 flex items-center justify-center">
           <div class="w-2 h-2 rounded-full bg-slate-400"></div>
@@ -826,7 +829,7 @@
 
   <!-- Sertifikat Showcase (Foto Asli Berkas Resmi) -->
   <section id="sertifikat" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-slate-850">
-    <div class="mb-10 text-left">
+    <div data-reveal="fade-up" class="mb-10 text-left">
       <h3 class="text-2xl sm:text-3xl font-bold tracking-wider text-slate-100 uppercase">
         SERTIFIKAT
       </h3>
@@ -837,7 +840,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
 
       <!-- 1. Sertifikat KOMDIGI Fundamental -->
-      <div class="group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-slate-600 transition-all duration-300 shadow-lg flex flex-col justify-between">
+      <div data-reveal="fade-up" class="delay-100 cert-card group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-slate-600 transition-all duration-300 shadow-lg flex flex-col justify-between">
         <div class="relative w-full aspect-[4/3] bg-white overflow-hidden flex items-center justify-center p-2">
           <img src="assets/certificates/sertifikat-komdigi-fundamental.jpg" alt="Sertifikat Fundamental Network Administrator KOMDIGI" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
         </div>
@@ -853,7 +856,7 @@
       </div>
 
       <!-- 2. Sertifikat KOMDIGI Intermediate -->
-      <div class="group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-slate-600 transition-all duration-300 shadow-lg flex flex-col justify-between">
+      <div data-reveal="fade-up" class="delay-200 cert-card group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-slate-600 transition-all duration-300 shadow-lg flex flex-col justify-between">
         <div class="relative w-full aspect-[4/3] bg-white overflow-hidden flex items-center justify-center p-2">
           <img src="assets/certificates/sertifikat-komdigi-intermediate.jpg" alt="Sertifikat Intermediate Network Administrator KOMDIGI" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
         </div>
@@ -869,7 +872,7 @@
       </div>
 
       <!-- 3. Sertifikat DQLab: Python Fundamental for Data Science -->
-      <div class="group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-slate-600 transition-all duration-300 shadow-lg flex flex-col justify-between">
+      <div data-reveal="fade-up" class="delay-300 cert-card group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-slate-600 transition-all duration-300 shadow-lg flex flex-col justify-between">
         <div class="relative w-full aspect-[4/3] bg-white overflow-hidden flex items-center justify-center p-2">
           <img src="assets/certificates/sertifikat-dqlab-python.jpg" alt="Sertifikat Python Fundamental for Data Science DQLab" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
         </div>
@@ -885,7 +888,7 @@
       </div>
 
       <!-- 4. Sertifikat DQLab: SQL Database Management -->
-      <div class="group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-slate-600 transition-all duration-300 shadow-lg flex flex-col justify-between">
+      <div data-reveal="fade-up" class="delay-100 cert-card group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-slate-600 transition-all duration-300 shadow-lg flex flex-col justify-between">
         <div class="relative w-full aspect-[4/3] bg-white overflow-hidden flex items-center justify-center p-2">
           <img src="assets/certificates/sertifikat-dqlab-sql.jpg" alt="Sertifikat SQL Database Management DQLab" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
         </div>
@@ -901,7 +904,7 @@
       </div>
 
       <!-- 5. Sertifikat DQLab: Fundamental SQL Using SELECT Statement -->
-      <div class="group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-slate-600 transition-all duration-300 shadow-lg flex flex-col justify-between">
+      <div data-reveal="fade-up" class="delay-200 cert-card group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 hover:border-slate-600 transition-all duration-300 shadow-lg flex flex-col justify-between">
         <div class="relative w-full aspect-[4/3] bg-white overflow-hidden flex items-center justify-center p-2">
           <img src="assets/certificates/sertifikat-dqlab-sql-select.jpg" alt="Sertifikat Fundamental SQL Using SELECT Statement DQLab" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
         </div>
@@ -921,7 +924,7 @@
 
   <!-- Kontak Section Sesuai Data CV -->
   <section id="kontak" class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-slate-850">
-    <div class="text-center max-w-2xl mx-auto mb-16">
+    <div data-reveal="fade-up" class="text-center max-w-2xl mx-auto mb-16">
       <h3 class="text-2xl sm:text-3xl text-slate-100 font-bold">Kontak</h3>
       <p class="text-slate-400 text-sm mt-3">
         Terbuka untuk peluang kerja di bidang Junior IT Support, Network Administrator, Database/SQL Management, maupun operasional teknologi informasi.
@@ -934,7 +937,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         
         <!-- WhatsApp / Telepon -->
-        <a href="https://wa.me/62895417896016" target="_blank" rel="noopener noreferrer" class="card-glass p-5 rounded-2xl flex items-center gap-4 hover:border-slate-500 transition-all block">
+        <a href="https://wa.me/62895417896016" target="_blank" rel="noopener noreferrer" data-reveal="fade-up" class="delay-100 contact-card card-glass p-5 rounded-2xl flex items-center gap-4 hover:border-slate-500 transition-all block">
           <div class="w-12 h-12 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center shrink-0 border border-slate-700">
             <i data-lucide="phone" class="w-5 h-5"></i>
           </div>
@@ -945,7 +948,7 @@
         </a>
 
         <!-- Email -->
-        <a href="mailto:doorahman03@gmail.com" class="card-glass p-5 rounded-2xl flex items-center gap-4 hover:border-slate-500 transition-all block">
+        <a href="mailto:doorahman03@gmail.com" data-reveal="fade-up" class="delay-200 contact-card card-glass p-5 rounded-2xl flex items-center gap-4 hover:border-slate-500 transition-all block">
           <div class="w-12 h-12 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center shrink-0 border border-slate-700">
             <i data-lucide="mail" class="w-5 h-5"></i>
           </div>
@@ -956,7 +959,7 @@
         </a>
 
         <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/muhammad-ridho-rahman-a42b18219" target="_blank" rel="noopener noreferrer" class="card-glass p-5 rounded-2xl flex items-center gap-4 hover:border-slate-500 transition-all block group">
+        <a href="https://www.linkedin.com/in/muhammad-ridho-rahman-a42b18219" target="_blank" rel="noopener noreferrer" data-reveal="fade-up" class="delay-300 contact-card card-glass p-5 rounded-2xl flex items-center gap-4 hover:border-slate-500 transition-all block group">
           <div class="w-12 h-12 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center shrink-0 border border-slate-700 shadow-sm group-hover:scale-105 transition-transform">
             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
               <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.64 1.64 0 1 0 0-3.28 1.64 1.64 0 0 0 0 3.28m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
@@ -969,7 +972,7 @@
         </a>
 
         <!-- GitHub -->
-        <a href="https://github.com/ridhorhmn" target="_blank" rel="noopener noreferrer" class="card-glass p-5 rounded-2xl flex items-center gap-4 hover:border-slate-500 transition-all block group">
+        <a href="https://github.com/ridhorhmn" target="_blank" rel="noopener noreferrer" data-reveal="fade-up" class="delay-400 contact-card card-glass p-5 rounded-2xl flex items-center gap-4 hover:border-slate-500 transition-all block group">
           <div class="w-12 h-12 rounded-xl bg-slate-800 text-slate-300 flex items-center justify-center shrink-0 border border-slate-700 shadow-sm group-hover:scale-105 transition-transform">
             <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
@@ -1009,7 +1012,56 @@
     // Inisialisasi ikon Lucide
     lucide.createIcons();
 
+    // ==========================================
+    // SCROLL PROGRESS BAR
+    // ==========================================
+    const scrollProgress = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      scrollProgress.style.width = pct + '%';
+    }, { passive: true });
+
+    // ==========================================
+    // SCROLL REVEAL (Intersection Observer)
+    // ==========================================
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          // Unobserve after first reveal for performance
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    // Observe all elements with data-reveal attribute
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // ==========================================
+    // SECTION TITLE UNDERLINE
+    // ==========================================
+    const titleObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.section-title-line').forEach(el => {
+      titleObserver.observe(el);
+    });
+
+    // ==========================================
     // Toggle Menu Mobile
+    // ==========================================
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const menuIcon = document.getElementById('menuIcon');
@@ -1036,6 +1088,54 @@
         closeIcon.classList.add('hidden');
       });
     });
+
+    // ==========================================
+    // ACTIVE NAV HIGHLIGHT ON SCROLL
+    // ==========================================
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.remove('text-slate-100');
+            if (link.getAttribute('href') === '#' + entry.target.id) {
+              link.classList.add('text-slate-100');
+            }
+          });
+        }
+      });
+    }, { threshold: 0.4 });
+
+    sections.forEach(section => navObserver.observe(section));
+
+    // ==========================================
+    // TOOL ICON CARDS: add class for CSS hover
+    // ==========================================
+    document.querySelectorAll('#keahlian .grid.grid-cols-4 > div, #keahlian .grid.grid-cols-4 ~ .grid > div').forEach(el => {
+      el.classList.add('tool-icon-card');
+    });
+
+    // ==========================================
+    // SKILL BADGES: add micro-hover class
+    // ==========================================
+    document.querySelectorAll('#keahlian .flex.flex-wrap span').forEach(el => {
+      el.classList.add('skill-badge');
+    });
+
+    // ==========================================
+    // HERO ELEMENTS: trigger immediately
+    // ==========================================
+    // Hero elements get revealed on page load with slight delay
+    setTimeout(() => {
+      document.querySelectorAll('#hero [data-reveal]').forEach((el, i) => {
+        setTimeout(() => {
+          el.classList.add('revealed');
+        }, i * 80);
+      });
+    }, 200);
+
   </script>
 </body>
 </html>

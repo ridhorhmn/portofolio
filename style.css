@@ -1,19 +1,46 @@
-/* Palet Warna Kalem & Netral (Warm Neutral & Slate/Zinc) */
+/* =========================================
+   Palet Warna Kalem & Netral (Warm Neutral & Slate/Zinc)
+   ========================================= */
 
 :root {
-  --bg-primary: #0f141c;       /* Dark charcoal/slate yang hangat & teduh */
+  --bg-primary: #0f141c;
   --card-bg: rgba(26, 33, 44, 0.65);
   --card-border: rgba(148, 163, 184, 0.12);
-  --accent-soft: #94a3b8;      /* Abu-abu netral elegan */
-  --accent-warm: #d4d4d8;      /* Putih hangat/zinc */
+  --accent-soft: #94a3b8;
+  --accent-warm: #d4d4d8;
+  --anim-ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* =========================================
+   TYPOGRAPHY & TEXT EFFECTS
+   ========================================= */
 
 /* Gradient teks yang lembut, tenang & tidak mencolok */
 .text-gradient {
   background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 50%, #94a3b8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
+
+/* Typing cursor blinking */
+.typing-cursor::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink-cursor 0.9s step-end infinite;
+  color: #94a3b8;
+  -webkit-text-fill-color: #94a3b8;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* =========================================
+   GLASSMORPHISM UI
+   ========================================= */
 
 /* Navigasi semi-transparan dengan blur modern */
 .bg-glass {
@@ -27,9 +54,343 @@
   background: rgba(24, 31, 42, 0.65);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(148, 163, 184, 0.12);
+  transition: border-color 0.3s ease, transform 0.35s var(--anim-ease), box-shadow 0.35s ease;
 }
 
 .card-glass:hover {
   border-color: rgba(203, 213, 225, 0.28);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================================
+   SCROLL REVEAL ANIMATIONS
+   ========================================= */
+
+/* Base state: hidden before reveal */
+[data-reveal] {
+  opacity: 0;
+  transition: opacity 0.75s var(--anim-ease), transform 0.75s var(--anim-ease);
+  will-change: opacity, transform;
+}
+
+[data-reveal="fade-up"] {
+  transform: translateY(40px);
+}
+
+[data-reveal="fade-down"] {
+  transform: translateY(-30px);
+}
+
+[data-reveal="fade-left"] {
+  transform: translateX(40px);
+}
+
+[data-reveal="fade-right"] {
+  transform: translateX(-40px);
+}
+
+[data-reveal="zoom-in"] {
+  transform: scale(0.88);
+}
+
+[data-reveal="flip-up"] {
+  transform: perspective(600px) rotateX(16deg) translateY(30px);
+}
+
+/* Revealed state */
+[data-reveal].revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger delays for children */
+[data-stagger] > *:nth-child(1)  { transition-delay: 0.05s; }
+[data-stagger] > *:nth-child(2)  { transition-delay: 0.12s; }
+[data-stagger] > *:nth-child(3)  { transition-delay: 0.19s; }
+[data-stagger] > *:nth-child(4)  { transition-delay: 0.26s; }
+[data-stagger] > *:nth-child(5)  { transition-delay: 0.33s; }
+[data-stagger] > *:nth-child(6)  { transition-delay: 0.40s; }
+[data-stagger] > *:nth-child(7)  { transition-delay: 0.47s; }
+[data-stagger] > *:nth-child(8)  { transition-delay: 0.54s; }
+[data-stagger] > *:nth-child(9)  { transition-delay: 0.60s; }
+[data-stagger] > *:nth-child(10) { transition-delay: 0.66s; }
+
+/* Manual delay utilities */
+.delay-100 { transition-delay: 0.1s !important; }
+.delay-200 { transition-delay: 0.2s !important; }
+.delay-300 { transition-delay: 0.3s !important; }
+.delay-400 { transition-delay: 0.4s !important; }
+.delay-500 { transition-delay: 0.5s !important; }
+.delay-600 { transition-delay: 0.6s !important; }
+.delay-700 { transition-delay: 0.7s !important; }
+.delay-800 { transition-delay: 0.8s !important; }
+
+/* =========================================
+   HERO & PROFILE CARD ANIMATIONS
+   ========================================= */
+
+/* Floating animation for profile card */
+.float-card {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px);    }
+  50%       { transform: translateY(-10px); }
+}
+
+/* Hero ambient glow blobs */
+.ambient-blob {
+  animation: blob-drift 12s ease-in-out infinite;
+}
+.ambient-blob:nth-child(2) { animation-delay: -4s; animation-duration: 16s; }
+.ambient-blob:nth-child(3) { animation-delay: -8s; animation-duration: 14s; }
+
+@keyframes blob-drift {
+  0%, 100% { transform: translate(0, 0) scale(1);       }
+  33%       { transform: translate(30px, -20px) scale(1.08); }
+  66%       { transform: translate(-20px, 10px) scale(0.95); }
+}
+
+/* Profile photo ring pulse */
+.ring-pulse {
+  animation: ring-pulse 3s ease-in-out infinite;
+}
+
+@keyframes ring-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(148, 163, 184, 0.0);  }
+  50%       { box-shadow: 0 0 0 6px rgba(148, 163, 184, 0.10); }
+}
+
+/* =========================================
+   SECTION HEADING UNDERLINE ANIMATE
+   ========================================= */
+
+.section-title-line {
+  display: inline-block;
+  position: relative;
+}
+.section-title-line::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #64748b, transparent);
+  border-radius: 2px;
+  transition: transform 0.6s var(--anim-ease);
+  transform-origin: center;
+}
+.section-title-line.revealed::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* =========================================
+   SKILL BADGES HOVER MICRO-ANIMATION
+   ========================================= */
+
+.skill-badge {
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+.skill-badge:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 12px -2px rgba(0,0,0,0.4);
+}
+
+/* =========================================
+   TOOL ICON CARDS
+   ========================================= */
+
+.tool-icon-card {
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.tool-icon-card:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.5);
+  border-color: rgba(148, 163, 184, 0.4) !important;
+}
+
+/* =========================================
+   PROJECT CARD ENHANCED
+   ========================================= */
+
+.project-card {
+  transition: transform 0.35s var(--anim-ease), box-shadow 0.35s ease, border-color 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6);
+}
+
+/* =========================================
+   TIMELINE / EXPERIENCE DOT PULSE
+   ========================================= */
+
+.timeline-dot {
+  position: relative;
+}
+.timeline-dot::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  background: rgba(148, 163, 184, 0.15);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.timeline-dot:hover::before,
+.group:hover .timeline-dot::before {
+  opacity: 1;
+  animation: dot-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes dot-pulse {
+  0%, 100% { transform: scale(1);   opacity: 0.15; }
+  50%       { transform: scale(1.4); opacity: 0.3;  }
+}
+
+/* =========================================
+   CERTIFICATE CARD SHIMMER
+   ========================================= */
+
+.cert-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s var(--anim-ease), box-shadow 0.35s ease, border-color 0.3s ease;
+}
+.cert-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255,255,255,0.05) 50%,
+    transparent 60%
+  );
+  transition: left 0.6s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+.cert-card:hover::before {
+  left: 160%;
+}
+.cert-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
+}
+
+/* =========================================
+   CONTACT CARD HOVER
+   ========================================= */
+
+.contact-card {
+  transition: transform 0.3s var(--anim-ease), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -8px rgba(0,0,0,0.5);
+}
+
+/* =========================================
+   NAV SCROLL PROGRESS BAR
+   ========================================= */
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, #64748b, #cbd5e1, #64748b);
+  z-index: 100;
+  transition: width 0.1s linear;
+}
+
+/* =========================================
+   BUTTON HOVER EFFECTS
+   ========================================= */
+
+.btn-primary {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.btn-primary:hover {
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(255,255,255,0.08);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* =========================================
+   SOCIAL ICON BOUNCE
+   ========================================= */
+
+.social-icon {
+  transition: transform 0.25s var(--anim-ease), border-color 0.25s ease;
+}
+.social-icon:hover {
+  transform: translateY(-4px) scale(1.1);
+}
+
+/* =========================================
+   SECTION DIVIDER FADE
+   ========================================= */
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(148,163,184,0.15), transparent);
+}
+
+/* =========================================
+   SCROLL DOWN INDICATOR (Hero)
+   ========================================= */
+
+.scroll-indicator {
+  animation: bounce-down 2s ease-in-out infinite;
+}
+
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0);    opacity: 0.5; }
+  50%       { transform: translateY(6px); opacity: 1;   }
+}
+
+/* =========================================
+   STAT COUNTER HIGHLIGHT
+   ========================================= */
+
+.stat-counter {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
+
+/* =========================================
+   PAGE LOADER FADE-IN
+   ========================================= */
+
+body {
+  animation: page-enter 0.5s ease both;
+}
+
+@keyframes page-enter {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
